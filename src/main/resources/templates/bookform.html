@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/savebook}" method="post" th:object="${book}">
+  <label>Enter Stock Id</label>
+  <input type="text" name="id" th:field="*{bookId}"><br>
+  <label>Enter Stock Name</label>
+  <input type="text" name="name" th:field="*{bookName}">  <br>
+  <label>Enter Purchase Cost</label>
+  <input type="text" name="price" th:field="*{bookPrice}"><br>
+
+  <input type="submit"value="ADD Book" ><br>
+
+
+
+</form>
+</body>
+</html>
